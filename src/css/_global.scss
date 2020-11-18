@@ -1,3 +1,8 @@
 $pink : #C30078;
 $grey : #8D8B8B;
-$light_grey : #B2B2B2
+$light_grey : #B2B2B2;
+
+@font-face {
+    font-family: 'source-sans-pro';
+    src: url('./../../src/fonts/source-sans-pro.woff2');
+}

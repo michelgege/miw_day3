@@ -1,4 +1,3 @@
-
 body {
     height: 100vh;
     background-image: url('../../src/img/pere-noel-cool.png'); // a changer pour une image mobile
@@ -7,8 +6,41 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'source-sans-pro', sans-serif;
+    font-size: 1.1rem;
+    &.delivery_sent {
+        border: 5px solid green;
+    }   
 }
 
-.delivery_sent {
-    border: 5px solid green;
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input {
+    color: $grey;
+    border: 1px solid $light_grey;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    font-size: 1.15em;
+}
+
+button {
+    background-color: $pink;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    padding: .75rem 1rem;
+    align-items: center;
+    color: white;
+    width: 80%;
+    border-radius: 5px;
+    font-size: 1.15em;
+}
+
+svg {
+    fill: #ffffff;
 }
