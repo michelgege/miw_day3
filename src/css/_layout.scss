@@ -1,10 +1,14 @@
-.delivery_sent {
-    background-color: green;
-}
 
 body {
     height: 100vh;
-    background-image: url('/src/img/pere-noel-cool.png');
+    background-image: url('../../src/img/pere-noel-cool.png'); // a changer pour une image mobile
     background-size: cover;
     background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delivery_sent {
+    border: 5px solid green;
 }
