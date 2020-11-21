@@ -24,8 +24,8 @@ input {
     color: $grey;
     border: 1px solid $light_grey;
     margin-bottom: 2rem;
-    padding: 1rem;
-    font-size: 1.15em;
+    padding: 1.15rem 0.75rem;
+    font-size: 1.25rem;
 }
 
 button {
@@ -43,4 +43,33 @@ button {
 
 svg {
     fill: #ffffff;
+}
+
+
+
+
+@media all and (min-width : 480PX) {
+    
+    input {
+        padding: 1.5rem 1rem;
+        font-size: 1.55rem;
+    }
+}
+
+@media all and (min-width : 768px) {
+    form {
+        flex-direction: row;
+        height: 5rem;
+    }
+    input {
+        margin-bottom: 0;
+        margin-right: 2rem;
+        width: 60%;
+        height: 100%;
+        font-size: 2rem;
+    }
+    button {
+        width: 45%;
+        height: 100%;
+    }
 }
