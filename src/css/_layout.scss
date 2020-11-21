@@ -1,6 +1,6 @@
 body {
     height: 100vh;
-    background-image: url('../../src/img/pere-noel-cool.png'); // a changer pour une image mobile
+    background-image: url('../../src/img/pere-noel-mobile.jpg'); // a changer pour une image mobile
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -9,8 +9,41 @@ body {
     font-family: 'source-sans-pro', sans-serif;
     font-size: 1.1rem;
     &.delivery_sent {
-        border: 5px solid green;
+        flex-direction: column;
+        form {
+            display: none;
+        }
+        div.sent {
+            display: flex;
+        }
+        a {
+            background-color: $pink;
+            display: block;
+            color: white;
+            font-size: 2rem;
+            margin-top: 2rem;
+            padding: 0.75rem 1rem;
+            border-radius: 5px;
+        }
     }   
+}
+
+div.sent {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: rgba($color: #fff, $alpha: 0.5);
+    border-radius: 15px;
+    border: 1px solid $grey;
+    width: 80%;
+    svg {
+        fill: $pink;
+    }
+}
+
+svg.hidden, a {
+    display: none;
 }
 
 form {
@@ -54,9 +87,15 @@ svg {
         padding: 1.5rem 1rem;
         font-size: 1.55rem;
     }
+    div.sent {
+        width: 50%;
+    }
 }
 
 @media all and (min-width : 768px) {
+    body {
+        background-image: url('../../src/img/pere-noel.jpg'); // a changer pour une image mobile
+    }
     form {
         flex-direction: row;
         height: 5rem;
@@ -71,5 +110,8 @@ svg {
     button {
         width: 45%;
         height: 100%;
+    }
+    div.sent {
+        width: 450px;
     }
 }
