@@ -1,41 +1,52 @@
 body {
     height: 100vh;
-    background-image: url('../../src/img/pere-noel-mobile.jpg'); // a changer pour une image mobile
+    background: #222e5f; //fallback pour l'image de fond
+    background-image: url('../../src/img/pere-noel-min-mobile.jpg'); // a changer pour une image mobile
     background-size: cover;
     background-position: center center;
+
+    //centre le formulaire dans la page
     display: flex;
     justify-content: center;
     align-items: center;
+
     font-family: 'source-sans-pro', sans-serif;
     font-size: 1.1rem;
     &.delivery_sent {
-        flex-direction: column;
-        form {
+        flex-direction: column; // affiche le bouton en dessous du div qui confirme l'envoi du formulaire
+        form { 
             display: none;
         }
         div.sent {
             display: flex;
         }
-        a {
-            background-color: $pink;
+        a { // affiche le bouton de retour apres l'envoi du formulmaire
             display: block;
+            
             color: white;
+            background-color: $pink;
+
             font-size: 2rem;
             margin-top: 2rem;
             padding: 0.75rem 1rem;
             border-radius: 5px;
+            &:hover {
+                text-decoration: none;
+                background-color: darken($color: $pink, $amount: 5);
+            }
         }
     }   
 }
 
-div.sent {
+div.sent { // div 
     display: none;
     justify-content: center;
     align-items: center;
-    padding: 3rem;
-    background-color: rgba($color: #fff, $alpha: 0.5);
+
+    background-color: rgba($color: #fff, $alpha: 0.5); //fond transparent
     border-radius: 15px;
     border: 1px solid $grey;
+    padding: 3rem;
     width: 80%;
     svg {
         fill: $pink;
@@ -43,17 +54,17 @@ div.sent {
 }
 
 svg.hidden, a {
-    display: none;
+    display: none; //cache le bouton de retour et le boit de confirmation d'envoi du formulaire
 }
 
-form {
+form { // affiche le bouton en dessous de l'input email
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-input {
+input { //input de mail
     color: $grey;
     border: 1px solid $light_grey;
     margin-bottom: 2rem;
@@ -61,17 +72,23 @@ input {
     font-size: 1.25rem;
 }
 
-button {
-    background-color: $pink;
-    border: none;
+button { // bouton d'envoi du formulaire
     display: flex;
     justify-content: space-around;
-    padding: .75rem 1rem;
     align-items: center;
+
+    border: none;
     color: white;
+    background-color: $pink;
+
     width: 80%;
     border-radius: 5px;
+    padding: .75rem 1rem;
     font-size: 1.15em;
+    cursor: pointer;
+    &:hover {
+        background-color: darken($color: $pink, $amount: 5);
+    }
 }
 
 svg {
@@ -79,9 +96,7 @@ svg {
 }
 
 
-
-
-@media all and (min-width : 480PX) {
+@media all and (min-width : 480px) {
     
     input {
         padding: 1.5rem 1rem;
@@ -94,9 +109,9 @@ svg {
 
 @media all and (min-width : 768px) {
     body {
-        background-image: url('../../src/img/pere-noel.jpg'); // a changer pour une image mobile
+        background-image: url('../../src/img/pere-noel-min.jpg'); // changer l'image de fond pour une image plus grande
     }
-    form {
+    form { // fait passer l'input et le bouton cote à cote
         flex-direction: row;
         height: 5rem;
     }
