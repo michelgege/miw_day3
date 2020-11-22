@@ -1,7 +1,4 @@
 <?php
-// Boilerplate for exercice DAY 3 at university MIW 05
-// Code is bad and poor... but just enough for skills students :-) 
-
 // Redirect to script to send email
 if (!empty($_POST['email'])) {
     session_start();
@@ -18,7 +15,6 @@ $body_class = "";
 if (!empty($_GET['delivery']) and $_GET['delivery'] === "sent") {
 
     // Sending invitation by email
-    // echo "OK c'est envoyé..";
     $body_class = "delivery_sent";
 }
 ?>
