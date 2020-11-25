@@ -32,7 +32,7 @@ body {
             border-radius: 5px;
             &:hover {
                 text-decoration: none;
-                background-color: darken($color: $pink, $amount: 5);
+                background-color: darken($color: $pink, $amount: 5); // couleur plus sombre au hover
             }
         }
     }   
