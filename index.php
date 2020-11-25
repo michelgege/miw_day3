@@ -21,39 +21,6 @@ if (!empty($_GET['delivery']) and $_GET['delivery'] === "sent") {
 
 <!DOCTYPE html>
 <html lang="fr">
-    <!--
-    ______HEAD______________
-    [x] html lang
-    [x] meta charset
-    [x] meta description
-    [x] meta viewport
-    [x] balise title 
-
-    ______UX__________________________
-    [x] augmenter surface d'appuis des <a>
-    [x] effet hover sur tout ce qui est clickable
-    [x] placeholder
-
-    [ ] champs required avec element visuel qui le montre
-    ______UI__________________________
-    [x] fallback color sur les images
-    
-    ______BONNES PRATIQUES_____________
-    [x] virer au maximum les div/classes inutiles
-    [x] virer imbrications css inutiles
-    [x] commenter css/html
-
-    ______OPTIMISATION_________________
-    [x] utilisaton SVG sprite sheet / font icons
-    [x] compression / crop images                                    ATTENTION PHOTO DU PERE NOEL IMMENSE
-    [x] un seul fichier CSS / JS
-    [x] images cropées si elles ne s'affichent pas en entier (par exemple sur mobile)
-    [x] progressive jpeg : https://coding.tools/progressive-jpeg
-
-    ______SEO / ACCESSIBILITE / AUTRES____________
-    [x] svg role="img", svg <title>, <desc> ??
-    [x] balise nav
-    -->
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,7 +46,7 @@ if (!empty($_GET['delivery']) and $_GET['delivery'] === "sent") {
         <input type="email" name="email" placeholder="Ton email de star..." required/>
 
         <button type="submit">
-            <p>Inscris-toi !</p>
+            Inscris-toi !
             <svg class="icon" width="43.358" height="50.481" role="img" aria-hidden="true">
                 <use xlink:href="#vip"></use>
             </svg>
