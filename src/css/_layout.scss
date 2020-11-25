@@ -64,8 +64,8 @@ form { // affiche le bouton en dessous de l'input email
     flex-direction: column;
 }
 
-input { //input de mail
-    color: $grey;
+input{ //input de mail
+    color: #111111;
     border: 1px solid $light_grey;
     margin-bottom: 2rem;
     padding: 1.15rem 0.75rem;
